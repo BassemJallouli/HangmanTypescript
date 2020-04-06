@@ -11,6 +11,8 @@ console.log(ranWord);
 var emptyArray = [];
 // Connection with DOM
 var DOMemptyArray = document.getElementsByClassName('emptyArray');
+var DOMgoodWord = document.getElementsByClassName('goodWord');
+var DOMwrongWord = document.getElementsByClassName('wrongWord');
 // 3.Populate emptyArray
 var createArray = function () {
     for (var n = 0; n < ranWord.length; n++) {
@@ -36,7 +38,9 @@ document.addEventListener('keypress', function (event) {
         goodWord.push(keyword);
         // replace underscore in emptyAraay with good word
         emptyArray[ranWord.indexOf(keyword)] = keyword;
+        // connect the word pushed to DOM
         DOMemptyArray[0].innerHTML = emptyArray.join(' ');
+        DOMgoodWord[0].innerHTML = goodWord.join(' ');
         // test if user word matches guesses
         if (emptyArray.join('') == ranWord) {
             alert('Awesome Winner');
@@ -47,4 +51,3 @@ document.addEventListener('keypress', function (event) {
         wrongWord.push(keyword);
     }
 });
-createArray();
