@@ -21,16 +21,22 @@ console.log(createArray());
 
 // 4.Ask users for guess
 document.addEventListener('keypress', (event) => {
+    // document.addEventListener() method attaches an event handler to the document
+    // addEventListener() works by adding a function or an object that implements
+    // keypress() method triggers the keypress event
     let keycode = event.keyCode;
     // keyCode property returns the Unicode character code of the key
     let keyword = String.fromCharCode(keycode);
     // fromCharCode() is a string method that is used to create a string from a sequence of Unicode values
-    console.log(event);
-// document.addEventListener() method attaches an event handler to the document
-// addEventListener() works by adding a function or an object that implements
-// keypress() method triggers the keypress event
-});
+    console.log(keyword);
 
 // 5.Test if guess is good
+    if (ranWord.indexOf(keyword)> -1) {
+    // indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+        console.log(true);
+    }
+});
+
+
 // 6.If guess is good then push to good array
 // 7.If guess is wrong then push to wrong array
