@@ -32,6 +32,8 @@ document.addEventListener('keypress', function (event) {
         // indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
         // 6.If guess is good then push to good array
         goodWord.push(keyword);
+        // replace underscore in emptyAraay with good word
+        emptyArray[ranWord.indexOf(keyword)] = keyword;
         console.log(goodWord);
     }
     else {
