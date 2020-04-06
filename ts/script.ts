@@ -11,11 +11,16 @@ let wrongWord: string[] = []; // wrong word array
 console.log(ranWord);
 let emptyArray: string[] = [];
 
+// Connection with DOM
+let DOMemptyArray = document.getElementsByClassName('emptyArray');
+
+
 // 3.Populate emptyArray
 let createArray = () => {
     for(let n=0; n<ranWord.length; n++){
-        
         emptyArray.push('_');
+        DOMemptyArray[0].innerHTML = emptyArray.join('');
+
     }
     return emptyArray;
 }
@@ -44,15 +49,15 @@ document.addEventListener('keypress', (event) => {
     if (emptyArray.join('') == ranWord) {
         alert('Awesome Winner')
     }
-    
-    
-    else {
-    wrongWord.push(keyword);
-    console.log(goodWord);
-    }
 }
+
+// 7.If guess is wrong then push to wrong array
+else {
+    wrongWord.push(keyword);
+    
+    }
+
 });
 
 
 
-// 7.If guess is wrong then push to wrong array
