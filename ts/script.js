@@ -15,7 +15,6 @@ var DOMemptyArray = document.getElementsByClassName('emptyArray');
 var createArray = function () {
     for (var n = 0; n < ranWord.length; n++) {
         emptyArray.push('_');
-        DOMemptyArray[0].innerHTML = emptyArray.join('');
     }
     return emptyArray;
 };
@@ -37,6 +36,7 @@ document.addEventListener('keypress', function (event) {
         goodWord.push(keyword);
         // replace underscore in emptyAraay with good word
         emptyArray[ranWord.indexOf(keyword)] = keyword;
+        DOMemptyArray[0].innerHTML = emptyArray.join(' ');
         // test if user word matches guesses
         if (emptyArray.join('') == ranWord) {
             alert('Awesome Winner');
@@ -47,3 +47,4 @@ document.addEventListener('keypress', function (event) {
         wrongWord.push(keyword);
     }
 });
+createArray();

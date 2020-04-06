@@ -19,7 +19,7 @@ let DOMemptyArray = document.getElementsByClassName('emptyArray');
 let createArray = () => {
     for(let n=0; n<ranWord.length; n++){
         emptyArray.push('_');
-        DOMemptyArray[0].innerHTML = emptyArray.join('');
+        
 
     }
     return emptyArray;
@@ -43,8 +43,9 @@ document.addEventListener('keypress', (event) => {
 
 // 6.If guess is good then push to good array
     goodWord.push(keyword);   
-    // replace underscore in emptyAraay with good word
+     // replace underscore in emptyAraay with good word
     emptyArray[ranWord.indexOf(keyword)] = keyword;
+    DOMemptyArray[0].innerHTML = emptyArray.join(' ');
     // test if user word matches guesses
     if (emptyArray.join('') == ranWord) {
         alert('Awesome Winner')
@@ -58,6 +59,10 @@ else {
     }
 
 });
+
+createArray();
+
+
 
 
 
