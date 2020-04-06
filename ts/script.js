@@ -34,11 +34,14 @@ document.addEventListener('keypress', function (event) {
         goodWord.push(keyword);
         // replace underscore in emptyAraay with good word
         emptyArray[ranWord.indexOf(keyword)] = keyword;
-        console.log(goodWord);
-    }
-    else {
-        wrongWord.push(keyword);
-        console.log(goodWord);
+        // test if user word matches guesses
+        if (emptyArray.join('') == ranWord) {
+            alert('Awesome Winner');
+        }
+        else {
+            wrongWord.push(keyword);
+            console.log(goodWord);
+        }
     }
 });
 // 7.If guess is wrong then push to wrong array
