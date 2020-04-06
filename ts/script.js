@@ -49,5 +49,6 @@ document.addEventListener('keypress', function (event) {
     // 7.If guess is wrong then push to wrong array
     else {
         wrongWord.push(keyword);
+        DOMwrongWord[0].innerHTML = wrongWord.join(' ');
     }
 });
