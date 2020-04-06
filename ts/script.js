@@ -7,7 +7,7 @@ var randNumber = Math.floor(Math.random() * listWord.length);
 var ranWord = listWord[randNumber];
 console.log(ranWord);
 var emptyArray = [];
-// 3.Populate underscores
+// 3.Populate emptyArray
 var createArray = function () {
     for (var n = 0; n < ranWord.length; n++) {
         emptyArray.push('_');

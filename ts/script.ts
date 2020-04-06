@@ -9,14 +9,16 @@ let ranWord: string = listWord[randNumber];
 console.log(ranWord);
 let emptyArray: string[] = [];
 
-// 3.Populate underscores
+// 3.Populate emptyArray
 let createArray = () => {
     for(let n=0; n<ranWord.length; n++){
+        
         emptyArray.push('_');
     }
     return emptyArray;
 }
 console.log(createArray());
+
 // 4.Ask users for guess
 document.addEventListener('keypress', (event) => {
     let keycode = event.keyCode;
