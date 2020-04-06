@@ -1,5 +1,5 @@
 // 1.Start an array of words
-var listWord = ["happy", "smile", "motivate", "awesome"];
+var listWord = ["joyful", "smile", "light", "bright"];
 // 2.Select random word
 var randNumber = Math.floor(Math.random() * listWord.length);
 // Math.random() function returns a floating-point in the range 0 to less than 1 
@@ -40,7 +40,7 @@ document.addEventListener('keypress', function (event) {
         emptyArray[ranWord.indexOf(keyword)] = keyword;
         // connect the word pushed to DOM
         DOMemptyArray[0].innerHTML = emptyArray.join(' ');
-        DOMgoodWord[0].innerHTML = goodWord.join(' ');
+        DOMgoodWord[0].innerHTML = goodWord.join('');
         // test if user word matches guesses
         if (emptyArray.join('') == ranWord) {
             alert('Awesome Winner');
@@ -49,6 +49,6 @@ document.addEventListener('keypress', function (event) {
     // 7.If guess is wrong then push to wrong array
     else {
         wrongWord.push(keyword);
-        DOMwrongWord[0].innerHTML = wrongWord.join(' ');
+        DOMwrongWord[0].innerHTML = wrongWord.join('');
     }
 });

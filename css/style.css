@@ -16,7 +16,7 @@ header {
     margin: 0 auto;
 }
 
-.goodGuess{
+.goodWord{
     font-size: 17px;
     height: 100px;
     width: 50%;
@@ -25,7 +25,7 @@ header {
     margin: 0 auto;
 }
 
-.wrongGuess{
+.wrongWord{
     font-size: 17px;
     height: 100px;
     width: 50%;

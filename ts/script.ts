@@ -1,5 +1,5 @@
 // 1.Start an array of words
-const listWord :string[] = ["happy","smile", "motivate","awesome"];
+const listWord :string[] = ["joyful","smile", "light","bright"];
 
 // 2.Select random word
 let randNumber: number = Math.floor(Math.random()*listWord.length);
@@ -15,7 +15,6 @@ let emptyArray: string[] = [];
 let DOMemptyArray = document.getElementsByClassName('emptyArray');
 let DOMgoodWord = document.getElementsByClassName('goodWord');
 let DOMwrongWord = document.getElementsByClassName('wrongWord');
-
 
 // 3.Populate emptyArray
 let createArray = () => {
@@ -49,21 +48,27 @@ document.addEventListener('keypress', (event) => {
     emptyArray[ranWord.indexOf(keyword)] = keyword;
     // connect the word pushed to DOM
     DOMemptyArray[0].innerHTML = emptyArray.join(' ');
-    DOMgoodWord[0].innerHTML = goodWord.join(' ');
+    DOMgoodWord[0].innerHTML = goodWord.join('');
     // test if user word matches guesses
     if (emptyArray.join('') == ranWord) {
-        alert('Awesome Winner')
+        alert('Awesome Winner');
+        
     }
 }
 
 // 7.If guess is wrong then push to wrong array
 else {
     wrongWord.push(keyword);
-    DOMwrongWord[0].innerHTML = wrongWord.join(' ');
+    DOMwrongWord[0].innerHTML = wrongWord.join('');
     
     }
 
 });
+
+
+
+
+
 
 
 
