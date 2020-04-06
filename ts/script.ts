@@ -6,6 +6,8 @@ let randNumber: number = Math.floor(Math.random()*listWord.length);
 // Math.random() function returns a floating-point in the range 0 to less than 1 
 // Math.floor() function returns the largest integer less than or equal to a given number.
 let ranWord: string = listWord[randNumber];
+let goodWord: string[] = []; // good word array
+let wrongWord: string[] = []; // wrong word array
 console.log(ranWord);
 let emptyArray: string[] = [];
 
@@ -33,10 +35,17 @@ document.addEventListener('keypress', (event) => {
 // 5.Test if guess is good
     if (ranWord.indexOf(keyword)> -1) {
     // indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
-        console.log(true);
+
+// 6.If guess is good then push to good array
+    goodWord.push(keyword);    
+    console.log(goodWord);
+    }
+    else {
+    wrongWord.push(keyword);
+    console.log(goodWord);
     }
 });
 
 
-// 6.If guess is good then push to good array
+
 // 7.If guess is wrong then push to wrong array
